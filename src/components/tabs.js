@@ -32,7 +32,7 @@ const AppTabs = ({ categories, categoriesLoader }) => {
 
   console.log(categories, categoriesLoader, "sdsd")
   return (
-    <Tabs defaultActiveKey="1" onChange={onChange}>
+    <Tabs defaultActiveKey="1" onChange={onChange} style={{ maxWidth: 1280, margin: '0 auto' }}>
       {
         categoriesLoader ? <Skeleton />
           :
