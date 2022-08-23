@@ -3,11 +3,11 @@ import { Alert } from 'antd';
 
 import { BASE_URL } from './config';
 
-const getAllCategories = () => {
-
+const getSpecificCategoryContent = (category) => {
+  console.log(category, "<,===s=d")
   let loading = true;
 
-  return axios.get(`${BASE_URL}/products/categories`)
+  return axios.get(`${BASE_URL}/products/category/${category}`)
     .then(function (response) {
       loading = false;
       console.log({ response, loading });
@@ -20,4 +20,4 @@ const getAllCategories = () => {
     })
 }
 
-export default getAllCategories;
+export default getSpecificCategoryContent;

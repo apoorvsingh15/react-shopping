@@ -9,6 +9,7 @@ function Home() {
   const [categoriesLoader, setCategoriesLoader] = useState(false);
 
   const getCategories = async () => {
+    setCategoriesLoader(true);
     const result = await getAllCategories();
     setCategories(result.response.data);
     setCategoriesLoader(result.loading);
